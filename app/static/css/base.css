@@ -1,0 +1,69 @@
+body{margin:0}
+
+.index{
+	position:absolute;
+    top:0;
+	width: 100%;
+	height: 100px;
+	opacity: 1;
+	background-color:white;
+}
+
+.playbutton{
+	position:absolute;
+	top:30px;
+	left:250px;
+	font-size:25px;
+}
+
+.abusbutton{
+	position:absolute;
+	top:30px;
+	left:380px;
+	font-size:25px;
+}
+
+.ctusbutton{
+	position:absolute;
+	top:30px;
+	left:540px;
+	font-size:25px;
+}
+
+.loginbutton{
+	position:absolute;
+	top:30px;
+	right:50px;
+	font-size:25px;
+}
+
+.signinbutton{
+	position:absolute;
+	top:30px;
+	right:170px;
+	font-size:25px;
+}
+
+.underline{
+	width:0;
+	height:5px;
+	background: #3366ff;
+	transition: width 0.2s;
+	margin-top:2px;
+}
+
+.underline-hover{
+	width:100%;
+}
+
+a{color:black}
+
+.footer {
+	position:absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	background-color: #e6e6e6;
+	font: "Helvetica", Arial, sans-serif;
+	bottom:0;
+}

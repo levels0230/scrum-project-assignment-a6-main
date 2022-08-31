@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form class="loginwindow" action="", method="post">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div>
+            <p>Please select a role
+                <select name="role" style="color:black">
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+            </p>
+        </div>
+        <div class="unamewindow">
+            <img class="icon" src="../static/materials/user.png" alt="Username">
+            <input class="usnameinput" type="text" name="username" id="username" placeholder="Please Enter Username">
+        </div>
+
+        <div class="pwwindow">
+            <img class="icon" src="../static/materials/key.png" alt="Password">
+            <input class="pwinput" type="text" name="password" id="password" placeholder="Please Enter Password">
+        </div>
+
+        <button type="submit" class="lgbutton">Register</button>
+        <a href="{{url_for('all.index')}}">
+            <button>Log in</button>
+        </a>
+    </form>
+
+{% endblock %}

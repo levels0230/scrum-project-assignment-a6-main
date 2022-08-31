@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Homepage</title>
+</head>
+<body>
+<div class="index">
+    <h2>
+        {{username}}
+        <h3>Welcome</h3>
+        <a href="{{url_for('all.logout')}}">Log out</a>
+    </h2>
+    <form method="post" action="">
+        <input type="text" name="context" id="context" placeholder="Enter question">
+        <input type="text" name="answer" id="answer" placeholder="Enter answer">
+        <input type="text" name="type" id="type" placeholder="Enter the question type (required/optional)">
+        <input type="number" name="level" id="level" placeholder="Enter question level">
+        <button type="submit">New Question</button>
+    </form>
+
+
+    {% if questions %}
+        <ul>
+            {% for question in questions %} 
+                <li id="{{id}}">             
+                    <p>Question ID: {{question.id}}</p>
+                    <p>Content: {{question.context}}</p>
+                    <p>Answer: {{question.answer}}</p>
+                    <p>Teacher: {{question.designer}}</p>
+                    <p>Type: {{question.q_type}}</p>   
+                    <p>Level:level {{question.q_level}}</p>        
+                </li>                
+            {% endfor %}
+        </ul>
+    {% else %}
+        <ul>
+            <li>  
+                No question yet        
+            </li>                
+        </ul>
+    {% endif %}
+    
+</div>
+
+</body>
+</html>

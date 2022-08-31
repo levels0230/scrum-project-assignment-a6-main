@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for("static", filename="css/loginpage.css") }}">
+<link rel="stylesheet" href="{{ url_for("static", filename="css/base.css") }}">
+<link rel="stylesheet" href="{{ url_for("static", filename="css/home.css") }}">
+</head>
+<body>
+<div class="index">
+	<a href="{{ url_for('all.index') }}">
+		<div class="playbutton" id="hitdiv1">
+			Home
+			<div class="underline" id="under1"></div>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="abusbutton" id="hitdiv2">
+			About Us
+			<div class="underline" id="under2"></div>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="ctusbutton" id="hitdiv3">
+			Contact Us
+			<div class="underline" id="under3"></div>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="loginbutton" id="hitdiv4">
+			Log in
+			<div class="underline" id="under4"></div>
+		</div>
+	</a>
+
+	<a href="#">
+		<div class="signinbutton" id="hitdiv5">
+			Sign in
+			<div class="underline" id="under5"></div>
+		</div>
+	</a>
+
+</div>
+
+{% block body %}{% endblock %}
+
+<div class="footer">
+	#############</br>
+	#############</br>
+	email: #############
+</div>
+
+<script type="text/javascript">
+	document.getElementById("hitdiv1").onmousemove=function(){
+		document.getElementById("under1").className = 'underline-hover underline';
+	}
+	document.getElementById("hitdiv1").onmouseleave=function(){
+		document.getElementById("under1").className = 'underline';
+	}
+
+	document.getElementById("hitdiv2").onmousemove=function(){
+		document.getElementById("under2").className = 'underline-hover underline';
+	}
+	document.getElementById("hitdiv2").onmouseleave=function(){
+		document.getElementById("under2").className = 'underline';
+	}
+
+	document.getElementById("hitdiv3").onmousemove=function(){
+		document.getElementById("under3").className = 'underline-hover underline';
+	}
+	document.getElementById("hitdiv3").onmouseleave=function(){
+		document.getElementById("under3").className = 'underline';
+	}
+
+	document.getElementById("hitdiv4").onmousemove=function(){
+		document.getElementById("under4").className = 'underline-hover underline';
+	}
+	document.getElementById("hitdiv4").onmouseleave=function(){
+		document.getElementById("under4").className = 'underline';
+	}
+
+	document.getElementById("hitdiv5").onmousemove=function(){
+		document.getElementById("under5").className = 'underline-hover underline';
+	}
+	document.getElementById("hitdiv5").onmouseleave=function(){
+		document.getElementById("under5").className = 'underline';
+	}
+</script>
+
+</body>
+</html>

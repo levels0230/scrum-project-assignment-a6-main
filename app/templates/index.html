@@ -1,0 +1,33 @@
+{% extends "base.html"%}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form style="height: 330px">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <h3>WELCOME</h3>
+
+        <a href="{{url_for('teacher.login')}}">
+            <div style="text-align: center" class="teacher">Teacher</div>
+        </a>
+
+        <a href="{{url_for('student.login')}}">
+            <div style="text-align: center" class="student">Student</div>
+        </a>
+    </form>
+{% endblock %}
